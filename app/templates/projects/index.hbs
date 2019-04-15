@@ -1,0 +1,7 @@
+<h1>Projects</h1>
+
+{{#each this.projects as |project|}}
+  <ProjectCard @project={{project}} />
+{{else}}
+  <p>Sorry, no projects.</p>
+{{/each}}
