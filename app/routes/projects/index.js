@@ -1,8 +1,13 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model() {
-    let projects = this.store.findAll('project');
+  async model() {
+    try {
+      let projects = await this.store.findAll('project');
+    } catch (e) {
+      console.log(e);
+    }
+    debugger;
     return projects;
   },
 });
