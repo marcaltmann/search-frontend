@@ -1,6 +1,12 @@
 'use strict';
 
+var dotenv = require('dotenv');
+
 module.exports = function(environment) {
+  if (environment === 'development') {
+    dotenv.config();
+  }
+
   let ENV = {
     modulePrefix: 'search-frontend',
     environment,
@@ -20,6 +26,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
+      ALGOLIA_API_KEY: process.env.ALGOLIA_API_KEY,
     }
   };
 

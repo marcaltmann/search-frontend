@@ -1,5 +1,9 @@
 <h1>Projects</h1>
 
+<div class="u-margin-top">
+  <SearchInput />
+</div>
+
 {{#each this.projects as |project|}}
   <ProjectCard @project={{project}} />
 {{else}}
