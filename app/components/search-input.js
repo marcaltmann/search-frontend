@@ -8,8 +8,8 @@ export default Component.extend({
 
     let inputElement = this.element.querySelector('#search-input');
     let options = {
-      appId: ENV.APP.ALGOLIA_APP_ID,
-      apiKey: ENV.APP.ALGOLIA_API_KEY,
+      appId: ENV.APP.ALGOLIA_PLACES_APP_ID,
+      apiKey: ENV.APP.ALGOLIA_PLACES_API_KEY,
       container: inputElement,
     };
 
