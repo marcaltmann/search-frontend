@@ -4,5 +4,5 @@ const { Model } = DS;
 export default Model.extend({
   name: DS.attr('string'),
   description: DS.attr('string'),
-  date: DS.attr('date'),
+  logo: DS.attr('string'),
 });
