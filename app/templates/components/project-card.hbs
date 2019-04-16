@@ -7,5 +7,9 @@
     <p class="card-text">
       {{@project.description}}
     </p>
+
+    {{#if this.hasDistance}}
+      {{format-distance this.distance}}
+    {{/if}}
   </div>
 </div>

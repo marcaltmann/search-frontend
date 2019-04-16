@@ -41,6 +41,7 @@ export default Route.extend({
     let projects = index.search('', {
       aroundLatLng,
       aroundRadius,
+      getRankingInfo: true,
     });
     return projects;
   },
