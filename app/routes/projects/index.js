@@ -14,6 +14,9 @@ function initializeSearch() {
 
 export default Route.extend({
   queryParams: {
+    q: {
+      refreshModel: true,
+    },
     lat: {
       refreshModel: true,
     },
@@ -39,7 +42,7 @@ export default Route.extend({
       aroundRadius = parseInt(params.radius, 10) * 1000;
     }
 
-    let projects = index.search('', {
+    let projects = index.search(params.q, {
       aroundLatLng,
       aroundRadius,
       getRankingInfo: true,

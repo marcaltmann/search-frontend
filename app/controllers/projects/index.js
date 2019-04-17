@@ -3,7 +3,8 @@ import { set } from '@ember/object';
 import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
-  queryParams: ['lat', 'lng', 'radius'],
+  queryParams: ['q', 'lat', 'lng', 'radius'],
+  q: '',
   lat: null,
   lng: null,
   radius: null,
