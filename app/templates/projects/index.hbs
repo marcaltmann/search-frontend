@@ -10,6 +10,52 @@
   </div>
 </div>
 
+<div class="row mb-3">
+  <div class="col-sm-6"></div>
+  <div class="col-sm-6">
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"
+             id="customRadioInline1" name="customRadioInline1"
+             class="custom-control-input"
+             checked={{eq this.radius 5}}
+             onclick={{action (mut this.radius) 5}}>
+      <label class="custom-control-label" for="customRadioInline1">5&thinsp;km</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"
+             id="customRadioInline2" name="customRadioInline1"
+             class="custom-control-input"
+             checked={{eq this.radius 25}}
+             onclick={{action (mut this.radius) 25}}>
+      <label class="custom-control-label" for="customRadioInline2">25&thinsp;km</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"
+             id="customRadioInline3" name="customRadioInline1"
+             class="custom-control-input"
+             checked={{eq this.radius 50}}
+             onclick={{action (mut this.radius) 50}}>
+      <label class="custom-control-label" for="customRadioInline3">50&thinsp;km</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"
+             id="customRadioInline4" name="customRadioInline1"
+             class="custom-control-input"
+             checked={{eq this.radius 100}}
+             onclick={{action (mut this.radius) 100}}>
+      <label class="custom-control-label" for="customRadioInline4">100&thinsp;km</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio"
+             id="customRadioInline5" name="customRadioInline1"
+             class="custom-control-input"
+             checked={{eq this.radius 0}}
+             onclick={{action (mut this.radius) 0}}>
+      <label class="custom-control-label" for="customRadioInline5">&infin;</label>
+    </div>
+  </div>
+</div>
+
 <div class="row">
   {{#each this.projects as |project|}}
     <div class="col-sm-6">

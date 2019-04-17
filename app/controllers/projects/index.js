@@ -7,7 +7,7 @@ export default Controller.extend({
   q: '',
   lat: null,
   lng: null,
-  radius: null,
+  radius: 0,
 
   projects: alias('model.hits'),
 
