@@ -3,11 +3,12 @@ import ENV from 'search-frontend/config/environment';
 import algoliasearch from 'algoliasearch';
 
 function initializeSearch() {
-  let appId = ENV.APP.ALGOLIA_SEARCH_APP_ID;
-  let apiKey = ENV.APP.ALGOLIA_SEARCH_API_KEY;
+  const appId = ENV.APP.ALGOLIA_SEARCH_APP_ID;
+  const apiKey = ENV.APP.ALGOLIA_SEARCH_API_KEY;
+  const indexName = `project_${ENV.environment}`;
 
   let client = algoliasearch(appId, apiKey);
-  let index = client.initIndex('Project');
+  let index = client.initIndex(indexName);
   return index;
 }
 
