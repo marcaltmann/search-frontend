@@ -1,0 +1,7 @@
+[Settings]
+
+# Redirect rule for SPAs
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
