@@ -46,6 +46,7 @@ export default Route.extend({
       aroundLatLng,
       aroundRadius,
       getRankingInfo: true,
+      hitsPerPage: 50,
     });
     return projects;
   },
