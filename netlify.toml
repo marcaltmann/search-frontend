@@ -2,6 +2,6 @@
 
 # Redirect rule for SPAs
 [[redirects]]
-  from = "/projects"
+  from = "/*"
   to = "/index.html"
   status = 200
