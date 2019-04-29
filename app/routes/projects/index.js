@@ -48,6 +48,7 @@ export default Route.extend({
       getRankingInfo: true,
       hitsPerPage: 50,
     });
+
     return projects;
   },
 });

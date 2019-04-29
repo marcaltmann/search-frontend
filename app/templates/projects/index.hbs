@@ -56,6 +56,23 @@
   </div>
 </div>
 
+{{#if this.lat}}
+  <LeafletMap @lat={{this.lat}} @lng={{this.lng}} @zoom={{this.zoom}} as |layers|>
+    <layers.tile @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"/>
+
+    {{#each this.projects as |project|}}
+      {{#each project._geoloc as |location|}}
+        <layers.marker @location={{location}} as |marker|>
+          <marker.popup>
+            <h5>{{project.name}}</h5>
+            <p>{{excerpt project.description}}</p>
+          </marker.popup>
+        </layers.marker>
+      {{/each}}
+    {{/each}}
+  </LeafletMap>
+{{/if}}
+
 <div class="row">
   {{#each this.projects as |project|}}
     <div class="col-sm-6">
