@@ -1,4 +1,4 @@
-<div id="project-card-{{@project.id}}" class="card">
+<div id="project-card-{{@project.id}}" class="card {{if @isSelected "text-white bg-dark"}}">
   <div class="card-body">
     <h5 class="card-title">
       {{@project.name}}

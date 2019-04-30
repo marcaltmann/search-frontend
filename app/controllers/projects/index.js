@@ -10,6 +10,7 @@ export default Controller.extend({
   radius: 0,
 
   zoom: 12,
+  selectedProject: null,
 
   projects: alias('model.hits'),
 
@@ -17,6 +18,10 @@ export default Controller.extend({
     changeLocation(latlng) {
       set(this, 'lat', latlng.lat);
       set(this, 'lng', latlng.lng);
+    },
+
+    selectProject(project) {
+      set(this, 'selectedProject', project);
     },
   },
 });
