@@ -10,7 +10,7 @@ export default Controller.extend({
   radius: 0,
 
   zoom: 12,
-  selectedProject: null,
+  selectedProjectId: null,
 
   projects: alias('model.hits'),
 

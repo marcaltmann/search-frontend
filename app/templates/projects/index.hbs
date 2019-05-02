@@ -60,7 +60,8 @@
   <div class="col-sm-6">
     {{#each this.projects as |project|}}
       <ProjectCard @project={{project}}
-                   @isSelected={{eq this.selectedProject.id project.id}}
+                   @isSelected={{eq this.selectedProjectId project.id}}
+                   @onSelect={{action (mut this.selectedProjectId)}}
                    class="mt-3"/>
     {{else}}
       <p>Sorry, no projects.</p>
@@ -78,7 +79,9 @@
 
         {{#each this.projects as |project|}}
           {{#each project._geoloc as |location|}}
-            <layers.marker @location={{location}} @onClick={{action "selectProject" project}}/>
+            <layers.marker @location={{location}}
+                           @onClick={{action (mut this.selectedProjectId) project.id}}
+                           @opacity={{if (eq this.selectedProjectId project.id) "1.0" "0.5"}}/>
           {{/each}}
         {{/each}}
       </LeafletMap>
